@@ -10,9 +10,9 @@ app:
 # deployment
 deployment:
   memoryRequest: "50Mi"
-  cpuRequest: "75m"
-  memoryLimit: "200Mi"
-  cpuLimit: "150m"
+  cpuRequest: "25m"
+  memoryLimit: "100Mi"
+  cpuLimit: "75m"
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -37,7 +37,7 @@ variables:
   secret: null
   nonSecret: null
 
-# horizontal scaler
+# horizontal autoscaler
 hpa:
   enabled: false
   minReplicas: 1
